@@ -1,5 +1,6 @@
 package br.com.desafio.desafio;
 
+import br.com.desafio.desafio.modelos.Contador;
 import br.com.desafio.desafio.services.LerNumero;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,8 @@ public class DesafioApplication implements CommandLineRunner {
 
 		LerNumero lerNumero = new LerNumero();
 		int numeroDigitado = lerNumero.lerNumero();
-		System.out.println(numeroDigitado);
+
+		Contador contador = new Contador();
+		contador.contador(numeroDigitado);
 	}
 }
